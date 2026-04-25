@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-bg: #050505;
+  --color-card: #111111;
+  --color-ink: #ffffff;
+  --color-muted: #888888;
+  --color-line: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-ink font-sans antialiased;
+  }
+}
+
+.glass-nav {
+  @apply sticky top-0 z-50 bg-bg/80 backdrop-blur-md border-b border-line;
+}
+
+.section-padding {
+  @apply py-24 px-8 max-w-7xl mx-auto;
+}
+
+.btn-primary {
+  @apply bg-white text-black px-8 py-3 rounded-none font-medium transition-all hover:bg-gray-200 active:scale-95 text-xs uppercase tracking-widest;
+}
+
+.btn-secondary {
+  @apply border border-line px-8 py-3 rounded-none font-medium transition-all hover:bg-white hover:text-black active:scale-95 text-xs uppercase tracking-widest;
+}
+
+.skill-tag {
+  @apply px-4 py-2 bg-card text-muted rounded-none text-[10px] font-bold uppercase tracking-widest border border-line;
+}
+
+.elegant-border {
+  @apply border border-line transition-colors duration-300 hover:border-muted;
+}
+
+.status-dot {
+  @apply inline-block w-2 hide-2 bg-[#44FF44] rounded-full mr-2;
+}
